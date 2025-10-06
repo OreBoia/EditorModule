@@ -1,0 +1,7 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Editor/UIToolkit/MainMenuExample/MainMenuStyleSheet.uss?fileID=7433441132597879392&amp;guid=a0075385305de6149a6bfc3e07eac329&amp;type=3#MainMenuStyleSheet" />
+    <ui:Label text="MAIN MENU" name="headline__label" style="font-size: 55px; color: rgb(255, 255, 255); text-shadow: 2px 0 0 rgb(0, 0, 0);" />
+    <ui:Button text="START GAME" name="startgame__button" class="menuRegularButton" />
+    <ui:Button text="CREDITS" name="credits__button" class="menuRegularButton" />
+    <ui:Button text="ABOUT US" name="about-us__button" class="menuRegularButton" />
+</ui:UXML>

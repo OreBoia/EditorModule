@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui:UXML
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ui="UnityEngine.UIElements"
+    xmlns:uie="UnityEditor.UIElements"
+    xsi:noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd"
+>
+    <Style src="project://database/Assets/Editor/UIToolkit/MyCustomEditor.uss?fileID=7433441132597879392&amp;guid=7c686f8508a7d9842b9cb84083e057a8&amp;type=3#MyCustomEditor" />
+	<ui:Label text="Hello World! From UXML" />
+	<ui:Label class="custom-label" text="Hello World! With Style" />
+    
+    <ui:Button text="Premi qui" name="button2"/>
+    <ui:Toggle label="Attiva?" name="toggle2"/>
+
+</ui:UXML>
