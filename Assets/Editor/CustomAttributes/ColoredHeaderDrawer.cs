@@ -3,6 +3,7 @@ using UnityEditor;
 
 /// <summary>
 /// Property Drawer per ColoredHeaderAttribute che crea header colorati con separatori
+/// Ottimizzato per funzionare meglio con array e liste
 /// </summary>
 [CustomPropertyDrawer(typeof(ColoredHeaderAttribute))]
 public class ColoredHeaderDrawer : DecoratorDrawer
@@ -11,7 +12,8 @@ public class ColoredHeaderDrawer : DecoratorDrawer
     
     public override float GetHeight()
     {
-        return coloredHeader.height + (coloredHeader.showLine ? 5f : 0f);
+        // Aggiungi spazio extra per migliorare la visibilità con array/liste
+        return coloredHeader.height + (coloredHeader.showLine ? 8f : 3f);
     }
     
     public override void OnGUI(Rect position)

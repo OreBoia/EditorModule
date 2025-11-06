@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
@@ -68,7 +69,12 @@ public class AdvancedPropertyDrawerExample : MonoBehaviour
     public WeaponStats primaryWeapon = new WeaponStats();
     public WeaponStats secondaryWeapon = new WeaponStats();
 
+    [ColoredHeader("🛠️ UPGRADE OPTIONS", "cyan")]
+    [SerializeField] private bool _upgradeOptionsHeader = true;
+    public List<int> upgradeOptions = new List<int>();
+
     [ColoredHeader("🎯 GRID OBJECTS", "blue")]
+    [SerializeField] private bool _gridObjectsHeader = true;
     public GridObject[] gridObjects = new GridObject[]
     {
         new GridObject { gridPosition = new Vector2i(0, 0), gridSize = new Vector2i(2, 2), spawnChance = 0.8f },
