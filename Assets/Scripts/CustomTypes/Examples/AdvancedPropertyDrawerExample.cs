@@ -64,21 +64,21 @@ public class AdvancedPropertyDrawerExample : MonoBehaviour
         public MinMaxRange windSpeed = new MinMaxRange(5f, 20f);
     }
 
-    [Header("Weapon Configuration")]
+    [ColoredHeader("⚔️ WEAPON CONFIGURATION", "red")]
     public WeaponStats primaryWeapon = new WeaponStats();
     public WeaponStats secondaryWeapon = new WeaponStats();
 
-    [Header("Grid Objects")]
+    [ColoredHeader("🎯 GRID OBJECTS", "blue")]
     public GridObject[] gridObjects = new GridObject[]
     {
         new GridObject { gridPosition = new Vector2i(0, 0), gridSize = new Vector2i(2, 2), spawnChance = 0.8f },
         new GridObject { gridPosition = new Vector2i(3, 1), gridSize = new Vector2i(1, 3), spawnChance = 0.6f }
     };
 
-    [Header("Environment")]
+    [ColoredHeader("🌍 ENVIRONMENT", "green")]
     public EnvironmentSettings environment = new EnvironmentSettings();
 
-    [Header("Player Stats")]
+    [ColoredHeader("👤 PLAYER STATS", "yellow")]
     [Percent]
     [Tooltip("Livello di salute del giocatore")]
     public float playerHealth = 1f;
@@ -91,14 +91,14 @@ public class AdvancedPropertyDrawerExample : MonoBehaviour
     [Tooltip("Livello di stamina del giocatore")]
     public float playerStamina = 0.9f;
 
-    [Header("Map Configuration")]
+    [ColoredHeader("🗺️ MAP CONFIGURATION", "purple")]
     [Tooltip("Dimensioni della mappa di gioco")]
     public Vector2i mapSize = new Vector2i(100, 100);
     
     [Tooltip("Posizione di spawn del giocatore")]
     public Vector2i playerSpawnPoint = new Vector2i(50, 50);
 
-    [Header("Performance Settings")]
+    [ColoredHeader("⚡ PERFORMANCE SETTINGS", "orange")]
     [MinMaxRange(30f, 144f)]
     [Tooltip("Range FPS target")]
     public MinMaxRange targetFPS = new MinMaxRange(60f, 120f);
