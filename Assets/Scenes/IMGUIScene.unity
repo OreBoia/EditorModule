@@ -1118,6 +1118,142 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 177120671}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &205467530
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 205467533}
+  - component: {fileID: 205467532}
+  - component: {fileID: 205467531}
+  m_Layer: 0
+  m_Name: GameObject (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &205467531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 205467530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b52388b5ad4da642a385461d17d0f23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AdvancedPropertyDrawerExample
+  primaryWeapon:
+    baseDamage:
+      min: 10
+      max: 20
+    criticalDamage:
+      min: 5
+      max: 15
+    baseAccuracy: 0.85
+    criticalChance: 0.15
+  secondaryWeapon:
+    baseDamage:
+      min: 10
+      max: 20
+    criticalDamage:
+      min: 5
+      max: 15
+    baseAccuracy: 0.85
+    criticalChance: 0.15
+  gridObjects:
+  - gridPosition:
+      x: 0
+      y: 0
+    gridSize:
+      x: 2
+      y: 2
+    spawnChance: 0.8
+  - gridPosition:
+      x: 3
+      y: 1
+    gridSize:
+      x: 1
+      y: 3
+    spawnChance: 0.6
+  environment:
+    dailyTemperature:
+      min: 15
+      max: 25
+    sunlightHours:
+      min: 6
+      max: 18
+    ambientLightIntensity: 0.3
+    windSpeed:
+      min: 5
+      max: 20
+  playerHealth: 1
+  playerMana: 0.7
+  playerStamina: 0.9
+  mapSize:
+    x: 100
+    y: 100
+  playerSpawnPoint:
+    x: 50
+    y: 50
+  targetFPS:
+    min: 60
+    max: 120
+  shadowQuality: 0.8
+--- !u!114 &205467532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 205467530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bb2fffad26bc774db3714455bb2defe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CustomPropertyDrawerExample
+  healthPercentage: 0.47
+  experiencePercentage: 0.069
+  audioVolume: 0.5
+  weaponDamage:
+    min: 24.4
+    max: 74.86666
+  temperatureRange:
+    min: -5
+    max: 8
+  spawnTimeRange:
+    min: 0.5
+    max: 2
+  gridPosition:
+    x: 5
+    y: 3
+  textureSize:
+    x: 512
+    y: 256
+  tileCoordinates:
+    x: 0
+    y: 0
+  calculatedValue: 0
+--- !u!4 &205467533
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 205467530}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &208678936
 GameObject:
   m_ObjectHideFlags: 0
@@ -5776,7 +5912,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1088143784
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7489,7 +7625,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!136 &1271970210
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -8612,7 +8748,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1517979905
 Transform:
   m_ObjectHideFlags: 0
@@ -9982,7 +10118,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1736186473
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10251,7 +10387,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!64 &1753710761
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -13580,7 +13716,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2117047324
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14066,3 +14202,4 @@ SceneRoots:
   - {fileID: 1088143785}
   - {fileID: 1736186474}
   - {fileID: 1517979905}
+  - {fileID: 205467533}
