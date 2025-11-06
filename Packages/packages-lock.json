@@ -118,7 +118,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.addressables": {
-      "version": "2.7.0",
+      "version": "2.7.2",
       "depth": 1,
       "source": "registry",
       "dependencies": {
@@ -436,7 +436,7 @@
       }
     },
     "com.unity.test-framework": {
-      "version": "1.5.1",
+      "version": "1.6.0",
       "depth": 0,
       "source": "builtin",
       "dependencies": {
