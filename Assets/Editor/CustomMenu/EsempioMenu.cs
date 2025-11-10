@@ -5,8 +5,7 @@ public class EsempioMenu
 {
 
     // Aggiunge una voce di menu "Tools/Crea Oggetto"
-    [MenuItem("Tools/Crea Oggetto Personalizzato %g")]
-
+    [MenuItem("Tools/Crea Oggetto Personalizzato %l")] //ctrl+g
     private static void CreateCustomGameObject()
     {
         // Crea un nuovo GameObject in scena con un nome predefinito
