@@ -1166,6 +1166,9 @@ MonoBehaviour:
       max: 15
     baseAccuracy: 0.85
     criticalChance: 0.15
+  _upgradeOptionsHeader: 1
+  upgradeOptions: 
+  _gridObjectsHeader: 1
   gridObjects:
   - gridPosition:
       x: 0
