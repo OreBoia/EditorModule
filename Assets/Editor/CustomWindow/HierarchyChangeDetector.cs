@@ -78,7 +78,7 @@ public class HierarchyChangeDetector : EditorWindow
         }
 
         // Ottieni lo stato attuale di tutti i GameObject nella scena.
-        var currentObjects = FindObjectsOfType<GameObject>();
+        var currentObjects = FindObjectsByType(typeof(GameObject), FindObjectsSortMode.None);
         var currentIds = new HashSet<int>(currentObjects.Select(o => o.GetInstanceID()));
         var previousIds = new HashSet<int>(hierarchyState.Keys);
 
@@ -144,10 +144,10 @@ public class HierarchyChangeDetector : EditorWindow
     private static void UpdateHierarchyState()
     {
         hierarchyState.Clear();
-        var allObjects = FindObjectsOfType<GameObject>();
+        var allObjects = FindObjectsByType(typeof(GameObject), FindObjectsSortMode.None);
         foreach (var obj in allObjects)
         {
-            hierarchyState[obj.GetInstanceID()] = GetGameObjectState(obj);
+            hierarchyState[obj.GetInstanceID()] = GetGameObjectState((GameObject)obj);
         }
     }
 

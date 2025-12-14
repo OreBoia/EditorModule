@@ -66,5 +66,8 @@
     "explorer.fileNesting.patterns": {
         "*.sln": "*.csproj",
     },
-    "dotnet.defaultSolution": "EditorModule.sln"
+    "dotnet.defaultSolution": "EditorModule.sln",
+    "cSpell.words": [
+        "Prefs"
+    ]
 }

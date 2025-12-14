@@ -1,9 +1,10 @@
+using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
 public class InputEditorWindow : EditorWindow
 {
-    private System.Collections.Generic.List<string> droppedObjectNames = new System.Collections.Generic.List<string>();
+    private List<string> droppedObjectNames = new List<string>();
 
     [MenuItem("Tools/Input Editor")]
     public static void ShowWindow()
@@ -14,6 +15,7 @@ public class InputEditorWindow : EditorWindow
     private void OnGUI()
     {
         Event e = Event.current;
+
         var rectCanvas = GUILayoutUtility.GetRect(position.width, position.height - 60);
 
         // Sfondo area interattiva
@@ -62,12 +64,12 @@ public class InputEditorWindow : EditorWindow
 
                 case EventType.DragPerform:
                     DragAndDrop.AcceptDrag();
-                    
+
                     foreach (Object draggedObject in DragAndDrop.objectReferences)
                     {
                         droppedObjectNames.Add(draggedObject.name);
                     }
-                    
+
                     e.Use();
                     break;
 

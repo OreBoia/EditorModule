@@ -19,8 +19,8 @@ public class LookAtPointEditorV2 : Editor
         serializedObject.Update();
         // Disegna il campo lookAtPoint usando il sistema serializzato
         EditorGUILayout.PropertyField(lookAtProp);
-        // Aggiunge messaggi come prima, usando lookAtProp anziché target diretto
         
+        // Aggiunge messaggi come prima, usando lookAtProp anziché target diretto
         if (lookAtProp.vector3Value.y > ((LookAtPoint)target).transform.position.y)
         {
             EditorGUILayout.HelpBox("Il punto di destinazione è sopra questo oggetto.", MessageType.Info);
