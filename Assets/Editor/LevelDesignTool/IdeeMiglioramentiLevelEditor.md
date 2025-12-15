@@ -1,5 +1,7 @@
 # Idee di esercizi per il Level Design Editor
 
+> Scegliete con attenzione quali milgioramenti apportare al tool di Level Desgin. Potete tranquillamente inventarvi quali migliorie fare (ovviamente che siano fattibili).
+
 ## Migliorie Core al Level Editor
 
 - **Snap-to-grid (aggancia alla griglia):**
@@ -26,13 +28,13 @@
   - Genera gli elementi per ciascun piano, aumentando `pos.y` di `offsetY * indicePiano` e raggruppando ogni piano sotto un GameObject "Floor_X".
 
 - **Evitamento sovrapposizioni:**
-  - Prima di piazzare un nuovo elemento, verifica l’intersezione AABB con gli elementi già piazzati (usa bounds basati su dimensioni).
+  - Prima di piazzare un nuovo elemento, verifica l’intersezione tra gli elementi già piazzati.
   - Se c’è overlap, tenta una nuova posizione fino a N volte, poi segnala in Console se non riesci a piazzarlo.
 
 - **Preset di pattern:**
   - Aggiungi un `Popup` con opzioni: `Griglia`, `Anello`, `Linea`, `Spirale`.
   - Implementa una funzione per calcolare le posizioni in base al pattern selezionato.
-  - Aggiungi salvataggio/caricamento di preset (vedi sezione ScriptableObject) per memorizzare tutti i parametri della finestra.
+  - Aggiungi salvataggio/caricamento di preset per memorizzare tutti i parametri della finestra.
 
 - **Visualizzazione con gizmo (anteprima):**
   - In `OnSceneGUI` o con `Handles`, disegna rettangoli/box che rappresentano le dimensioni degli elementi nelle posizioni previste.
@@ -45,6 +47,10 @@
 - **Operazioni di gruppo:**
   - Aggiungi un pulsante "Unisci selezionati al Layout" che prende gli oggetti selezionati nella scena e li riparenta sotto "GeneratedLayout".
   - Aggiorna eventuali metadati (vedi sezione tagging) per inserirli nell’insieme gestito.
+
+- **Collegamaneto Corridoi Stanze**
+  - Aggiungi la possibilità di collegare le stanze tramite corridoi
+  - Utilizza dei punti fissi nelle prefab delle stanze che determinino dove il corridoio può attacarsi
 
 ## UX dell’Editor Unity
 
@@ -100,19 +106,15 @@
   - Crea uno `ScriptableObject` che memorizza tutti i campi della finestra.
   - Aggiungi pulsanti "Salva preset" e "Carica preset" per serializzare/deserializzare le impostazioni.
 
-## Scene e utilità runtime
+## EXTRA: Scene e utilità runtime
 
-- **EXTRA: Corridoi NavMesh-ready:**
+- **Corridoi NavMesh-ready:**
   - Aggiungi componenti/flag necessari (es. `NavMeshObstacle` o layer/tag) per facilitare il baking.
   - Fornisci un pulsante "Prepara per NavMesh" che applica le impostazioni a tutti i corridoi.
 
 - **Punti di spawn runtime:**
   - Aggiungi un `Toggle` "Crea SpawnPoint"; se attivo, istanzia piccoli marker al centro di ogni stanza.
   - Permetti di scegliere prefab/icone e layer dei marker.
-
-- **Tagging dei metadati:**
-  - Crea un componente `LevelElementMeta` con campi: tipo (stanza/corridoio), dimensioni, indice.
-  - Aggiungi il componente agli elementi generati per future query/filtri.
 
 ## Testing e strumenti
 

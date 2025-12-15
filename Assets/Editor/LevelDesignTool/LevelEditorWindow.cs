@@ -20,6 +20,7 @@ public class LevelEditorWindow : EditorWindow
     private float larghezzaStanza = 5f, profonditaStanza = 5f;
     private float lunghezzaCorr = 8f, larghezzaCorr = 2f;
     private bool randomizza = false;
+    private float spreadFactor = 1.5f;
 
     // Riferimenti a prefab opzionali
     public GameObject prefabStanza;
@@ -63,6 +64,11 @@ public class LevelEditorWindow : EditorWindow
 
         // Opzione di randomizzazione
         randomizza = EditorGUILayout.Toggle(new GUIContent("Randomizza dimensioni / posizioni"), randomizza);
+        if (randomizza)
+        {
+            spreadFactor = EditorGUILayout.FloatField(new GUIContent("Fattore di Dispersione"), spreadFactor);
+            if (spreadFactor < 0.1f) spreadFactor = 0.1f; // limite minimo
+        }
 
         // Campi per prefab personalizzati
         prefabStanza = (GameObject)EditorGUILayout.ObjectField("Prefab Stanza",
@@ -116,7 +122,7 @@ public class LevelEditorWindow : EditorWindow
         
         // Calcola un range di dispersione per posizionare casualmente gli elementi se randomizzazione attiva
         float maxDim = Mathf.Max(baseLarghezza, baseProfondita);
-        float rangePos = numeroElementi * maxDim * 1.5f; // fattore di spread basato su quantità e dimensione max
+        float rangePos = numeroElementi * maxDim * spreadFactor; // fattore di spread basato su quantità e dimensione max
 
         // Loop di generazione degli elementi
         for (int i = 0; i < numeroElementi; i++)
