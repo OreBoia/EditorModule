@@ -1,6 +1,6 @@
 # Idee di esercizi per il Level Design Editor
 
-> Scegliete con attenzione quali milgioramenti apportare al tool di Level Desgin. Potete tranquillamente inventarvi quali migliorie fare (ovviamente che siano fattibili).
+>NON DOVETE FARLI TUTTI!!! SCEGLIETE SOLO QUELLI CHE PIÙ VI INTERESSA FARE O INVENTATE VOI NUOVE FUNZIONALITÁ O MILGIORIE
 
 ## Migliorie Core al Level Editor
 
@@ -115,12 +115,3 @@
 - **Punti di spawn runtime:**
   - Aggiungi un `Toggle` "Crea SpawnPoint"; se attivo, istanzia piccoli marker al centro di ogni stanza.
   - Permetti di scegliere prefab/icone e layer dei marker.
-
-## Testing e strumenti
-
-- **Unit test (EditMode):**
-  - Scrivi test che chiamano `GeneraElementi()` e verificano: numero oggetti, parent corretto, nomi coerenti, assenza di overlap.
-  - Usa `Undo.PerformUndo()`/`Redo` per testare robustezza delle operazioni.
-
-- **Query di ricerca:**
-  - Documenta come trovare tutte le `EditorWindow` e i `PropertyDrawer` nella repo con parole chiave e percorsi.
